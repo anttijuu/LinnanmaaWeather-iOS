@@ -18,6 +18,6 @@ struct Measurement: Identifiable {
 
 extension Measurement {
 	var valueFormatted: String {
-		Decimal(value).formatted(.number.precision(.fractionLength(1))) + unit
+		String.localizedStringWithFormat("%.1lf%@", value, unit)
 	}
 }
