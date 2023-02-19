@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 
 class WeatherModel: ObservableObject {
 
@@ -23,16 +24,22 @@ class WeatherModel: ObservableObject {
 				status = NSLocalizedString("Weather updated", comment: "Successfully updated the weather data")
 			}
 		} catch WeatherError.httpError(let code) {
+			logger.error("HTTP error with code \(code)")
 			status = String(format: NSLocalizedString("Failed to update weather (HTTP error %d)", comment: "Network error prevented updating weather"), code)
 		} catch WeatherError.parseError(let msg) {
+			logger.error("Error parsing JSON: \(msg)")
 			status = String(format: NSLocalizedString("Data from server was malformed: %@", comment: "Server content was malformed"), msg)
 		} catch {
+			logger.error("Unexpected error \(error.localizedDescription)")
 			status = String(format: NSLocalizedString("Unexpected error %@", comment: "Something went wrong."), error.localizedDescription)
 		}
 	}
 
 	private func getWeather(from url: URL) async throws -> Data? {
-		let (data, response) = try await URLSession.shared.data(from: url)
+		logger.debug("Initiating weather request to \(url.host() ?? "No host")")
+		var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
+		request.httpMethod = "GET"
+		let (data, response) = try await URLSession.shared.data(for: request)
 		if let httpResponse = response as? HTTPURLResponse {
 			if httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 {
 				return data
@@ -44,6 +51,7 @@ class WeatherModel: ObservableObject {
 	}
 
 	private func parseWeather(from data: Data) throws -> Weather {
+		logger.debug("Got \(data.count) bytes of data")
 		do {
 			let weather = try JSONDecoder().decode(Weather.self, from: data)
 			return weather
@@ -53,6 +61,7 @@ class WeatherModel: ObservableObject {
 	}
 
 	private func updateMeasurements(from weather: Weather) {
+		logger.debug("Updating the measurements from data")
 		measurements.removeAll()
 		measurements.append(Measurement(name: NSLocalizedString("Temperature", comment: ""), value: weather.tempnow, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Humidity", comment: ""), value: Double(weather.humidity), unit: "%"))
@@ -62,4 +71,5 @@ class WeatherModel: ObservableObject {
 		timeStamp = weather.timestamp
 	}
 
+	private let logger = Logger(subsystem: "com.anttijuustila.linnanmaaweather", category: "weathermodel")
 }
