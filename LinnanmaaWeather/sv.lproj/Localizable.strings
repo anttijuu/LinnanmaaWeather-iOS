@@ -17,7 +17,7 @@
 "Refresh" = "Uppdatera";
 
 /* No comment provided by engineer. */
-"Temperature" = "Temperatur";
+"Temperature" = "Temperaturen";
 
 /* Something went wrong. */
 "Unexpected error %@" = "Oväntat fel %@";
