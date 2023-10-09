@@ -17,7 +17,7 @@ class WeatherModel: ObservableObject {
 	@MainActor
 	func getWeather() async {
 		do {
-			let url = URL(string: "http://weather.willab.fi/weather.json")!
+			let url = URL(string: "https://weather.willab.fi/weather.json")!
 			if let data = try await getWeather(from: url) {
 				let weather = try parseWeather(from: data)
 				updateMeasurements(from: weather)
