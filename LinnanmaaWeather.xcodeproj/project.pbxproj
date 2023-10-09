@@ -17,6 +17,7 @@
 		315D3D5F299E99400005F19C /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D3D5E299E99400005F19C /* Measurement.swift */; };
 		86446D092AD3EC070082FE31 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 86446D082AD3EC060082FE31 /* Localizable.xcstrings */; };
 		86446D0B2AD3EC070082FE31 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 86446D0A2AD3EC070082FE31 /* InfoPlist.xcstrings */; };
+		86446D0D2AD3F1AC0082FE31 /* simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png in Resources */ = {isa = PBXBuildFile; fileRef = 86446D0C2AD3F1AC0082FE31 /* simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		315D3D6B29A0BE720005F19C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		86446D082AD3EC060082FE31 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		86446D0A2AD3EC070082FE31 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		86446D0C2AD3F1AC0082FE31 /* simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		315D3D4E299E82D40005F19C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				86446D0C2AD3F1AC0082FE31 /* simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png */,
 				315D3D4F299E82D40005F19C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -161,6 +164,7 @@
 			files = (
 				86446D0B2AD3EC070082FE31 /* InfoPlist.xcstrings in Resources */,
 				315D3D50299E82D40005F19C /* Preview Assets.xcassets in Resources */,
+				86446D0D2AD3F1AC0082FE31 /* simulator_screenshot_0A3D7280-4447-453D-882A-B8B67036B9AD.png in Resources */,
 				86446D092AD3EC070082FE31 /* Localizable.xcstrings in Resources */,
 				315D3D4D299E82D40005F19C /* Assets.xcassets in Resources */,
 			);
