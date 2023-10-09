@@ -64,10 +64,13 @@ class WeatherModel: ObservableObject {
 		logger.debug("Updating the measurements from data")
 		measurements.removeAll()
 		measurements.append(Measurement(name: NSLocalizedString("Temperature", comment: ""), value: weather.tempnow, unit: " °C"))
-		measurements.append(Measurement(name: NSLocalizedString("Humidity", comment: ""), value: Double(weather.humidity), unit: "%"))
+		measurements.append(Measurement(name: NSLocalizedString("Feels like", comment: ""), value: weather.windchill, unit: " °C"))
+		measurements.append(Measurement(name: NSLocalizedString("Lowest temp", comment: ""), value: weather.templo, unit: " °C"))
+		measurements.append(Measurement(name: NSLocalizedString("Highest temp", comment: ""), value: weather.temphi, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Air pressure", comment: ""), value: weather.airpressure, unit: " hPa"))
-		measurements.append(Measurement(name: NSLocalizedString("Wind direction", comment: ""), value: Double(weather.winddir), unit: "°"))
+		measurements.append(Measurement(name: NSLocalizedString("Humidity", comment: ""), value: Double(weather.humidity), unit: "%"))
 		measurements.append(Measurement(name: NSLocalizedString("Wind speed", comment: ""), value: weather.windspeed, unit: " m/s"))
+		measurements.append(Measurement(name: NSLocalizedString("Wind direction", comment: ""), value: Double(weather.winddir), unit: "°"))
 		timeStamp = weather.timestamp
 	}
 

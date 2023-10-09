@@ -15,8 +15,8 @@
 		315D3D5A299E8A5B0005F19C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D3D59299E8A5B0005F19C /* Weather.swift */; };
 		315D3D5D299E951A0005F19C /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D3D5C299E951A0005F19C /* WeatherError.swift */; };
 		315D3D5F299E99400005F19C /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315D3D5E299E99400005F19C /* Measurement.swift */; };
-		315D3D64299F6BB50005F19C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 315D3D62299F6BB50005F19C /* InfoPlist.strings */; };
-		315D3D67299F6BB50005F19C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 315D3D65299F6BB50005F19C /* Localizable.strings */; };
+		86446D092AD3EC070082FE31 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 86446D082AD3EC060082FE31 /* Localizable.xcstrings */; };
+		86446D0B2AD3EC070082FE31 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 86446D0A2AD3EC070082FE31 /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,10 @@
 		315D3D5B299E907D0005F19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		315D3D5C299E951A0005F19C /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 		315D3D5E299E99400005F19C /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
-		315D3D63299F6BB50005F19C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		315D3D66299F6BB50005F19C /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
-		315D3D68299F6BBC0005F19C /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		315D3D69299F6BBC0005F19C /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		315D3D6A29A0BE580005F19C /* weather-app-ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-app-ui.png"; sourceTree = "<group>"; };
 		315D3D6B29A0BE720005F19C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		86446D082AD3EC060082FE31 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		86446D0A2AD3EC070082FE31 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				315D3D5B299E907D0005F19C /* Info.plist */,
-				315D3D65299F6BB50005F19C /* Localizable.strings */,
-				315D3D62299F6BB50005F19C /* InfoPlist.strings */,
+				86446D082AD3EC060082FE31 /* Localizable.xcstrings */,
+				86446D0A2AD3EC070082FE31 /* InfoPlist.xcstrings */,
 				315D3D58299E8A1A0005F19C /* Model */,
 				315D3D48299E82D20005F19C /* LinnanmaaWeatherApp.swift */,
 				315D3D4A299E82D20005F19C /* ContentView.swift */,
@@ -161,9 +159,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86446D0B2AD3EC070082FE31 /* InfoPlist.xcstrings in Resources */,
 				315D3D50299E82D40005F19C /* Preview Assets.xcassets in Resources */,
-				315D3D67299F6BB50005F19C /* Localizable.strings in Resources */,
-				315D3D64299F6BB50005F19C /* InfoPlist.strings in Resources */,
+				86446D092AD3EC070082FE31 /* Localizable.xcstrings in Resources */,
 				315D3D4D299E82D40005F19C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,27 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		315D3D62299F6BB50005F19C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				315D3D63299F6BB50005F19C /* sv */,
-				315D3D68299F6BBC0005F19C /* fi */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		315D3D65299F6BB50005F19C /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				315D3D66299F6BB50005F19C /* sv */,
-				315D3D69299F6BBC0005F19C /* fi */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		315D3D51299E82D40005F19C /* Debug */ = {
@@ -259,6 +236,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -313,6 +291,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
