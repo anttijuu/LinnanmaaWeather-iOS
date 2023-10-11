@@ -31,9 +31,9 @@ struct Weather: Codable {
 	let temphi: Double
 	let airpressure: Double
 	let humidity: Double
-	let precipitation1h: Int
-	let precipitation1d: Int
-	let precipitation1w: Int
+	let precipitation1h: Double
+	let precipitation1d: Double
+	let precipitation1w: Double
 	let solarrad: Int
 	let windspeed: Double
 	let windspeedmax: Double
