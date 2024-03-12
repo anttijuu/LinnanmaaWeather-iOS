@@ -48,8 +48,7 @@ final class WeatherModel {
 
 	private func updateMeasurements(from weather: Weather) {
 		logger.debug("Updating the measurements from data")
-		var measurements = [Measurement]()
-		// measurements.removeAll()
+		measurements.removeAll()
 		measurements.append(Measurement(name: NSLocalizedString("Temperature", comment: ""), value: weather.tempnow, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Feels like", comment: ""), value: weather.windchill, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Lowest temp", comment: ""), value: weather.templo, unit: " °C"))
