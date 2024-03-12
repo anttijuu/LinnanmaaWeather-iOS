@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-	@EnvironmentObject var weather: WeatherModel
+	@Environment(WeatherModel.self) var weather
 
 	var body: some View {
 		ScrollView {
@@ -34,7 +34,7 @@ struct ContentView: View {
 					HStack {
 						Text(measurement.name)
 						Spacer()
-						Text(measurement.valueFormatted)
+						Text(measurement.formatted)
 					}
 				}
 			}
@@ -60,7 +60,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+	@State static var weather = WeatherModel()
 	static var previews: some View {
 		ContentView()
+			.environment(weather)
 	}
 }

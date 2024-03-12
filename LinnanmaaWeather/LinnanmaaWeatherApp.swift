@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct LinnanmaaWeatherApp: App {
 
-	@ObservedObject var weather = WeatherModel()
+	@State var weather = WeatherModel()
 
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
-				.environmentObject(weather)
+				.environment(weather)
 		}
 	}
 }

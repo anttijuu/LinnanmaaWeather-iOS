@@ -17,7 +17,7 @@ struct Measurement: Identifiable {
 }
 
 extension Measurement {
-	var valueFormatted: String {
+	var formatted: String {
 		String.localizedStringWithFormat("%.1lf%@", value, unit)
 	}
 }

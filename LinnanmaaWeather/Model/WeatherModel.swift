@@ -8,17 +8,18 @@
 import Foundation
 import os.log
 
-class WeatherModel: ObservableObject {
+@Observable
+final class WeatherModel {
 
-	@Published var timeStamp: String = ""
-	@Published var status: String = ""
-	@Published var measurements = [Measurement]()
+	var timeStamp: String = ""
+	var status: String = ""
+	var measurements = [Measurement]()
 
 	@MainActor
 	func getWeather() async {
 		do {
 			let url = URL(string: "https://weather.willab.fi/weather.json")!
-			if let data = try await getWeather(from: url) {
+			if let data = try await LinnanmaaWeather.getWeather(from: url) {
 				let weather = try parseWeather(from: data)
 				updateMeasurements(from: weather)
 				status = NSLocalizedString("Weather updated", comment: "Successfully updated the weather data")
@@ -35,21 +36,6 @@ class WeatherModel: ObservableObject {
 		}
 	}
 
-	private func getWeather(from url: URL) async throws -> Data? {
-		logger.debug("Initiating weather request to \(url.host() ?? "No host")")
-		var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
-		request.httpMethod = "GET"
-		let (data, response) = try await URLSession.shared.data(for: request)
-		if let httpResponse = response as? HTTPURLResponse {
-			if httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 {
-				return data
-			} else {
-				throw WeatherError.httpError(httpResponse.statusCode)
-			}
-		}
-		return nil
-	}
-
 	private func parseWeather(from data: Data) throws -> Weather {
 		logger.debug("Got \(data.count) bytes of data")
 		do {
@@ -62,7 +48,8 @@ class WeatherModel: ObservableObject {
 
 	private func updateMeasurements(from weather: Weather) {
 		logger.debug("Updating the measurements from data")
-		measurements.removeAll()
+		var measurements = [Measurement]()
+		// measurements.removeAll()
 		measurements.append(Measurement(name: NSLocalizedString("Temperature", comment: ""), value: weather.tempnow, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Feels like", comment: ""), value: weather.windchill, unit: " °C"))
 		measurements.append(Measurement(name: NSLocalizedString("Lowest temp", comment: ""), value: weather.templo, unit: " °C"))
@@ -75,4 +62,18 @@ class WeatherModel: ObservableObject {
 	}
 
 	private let logger = Logger(subsystem: "com.anttijuustila.linnanmaaweather", category: "weathermodel")
+}
+
+func getWeather(from url: URL) async throws -> Data? {
+	var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 20)
+	request.httpMethod = "GET"
+	let (data, response) = try await URLSession.shared.data(for: request)
+	if let httpResponse = response as? HTTPURLResponse {
+		if httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 {
+			return data
+		} else {
+			throw WeatherError.httpError(httpResponse.statusCode)
+		}
+	}
+	return nil
 }
