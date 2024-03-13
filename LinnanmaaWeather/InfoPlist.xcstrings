@@ -22,6 +22,12 @@
             "state" : "translated",
             "value" : "Vädret i Linnanmaa"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Погода Ліннанмаа"
+          }
         }
       }
     }

@@ -146,6 +146,7 @@
 				Base,
 				fi,
 				sv,
+				uk,
 			);
 			mainGroup = 315D3D3C299E82D20005F19C;
 			productRefGroup = 315D3D46299E82D20005F19C /* Products */;

@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : "%@ %@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %@"
+          }
         }
       }
     },
@@ -29,6 +35,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lufttryck"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "атмосферний тиск"
           }
         }
       }
@@ -47,6 +59,12 @@
             "state" : "translated",
             "value" : "Data från servern var felaktig: %@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дані з сервера були неправильно сформовані: %@"
+          }
         }
       }
     },
@@ -64,6 +82,12 @@
             "state" : "translated",
             "value" : "Det gick inte att uppdatera väder (HTTP-fel %d)"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося оновити погоду (помилка HTTP %d)"
+          }
         }
       }
     },
@@ -79,6 +103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Känns som"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відчуває, як"
           }
         }
       }
@@ -96,6 +126,12 @@
             "state" : "translated",
             "value" : "Högstä"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найвища температура"
+          }
         }
       }
     },
@@ -111,6 +147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fuktighet"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вологість"
           }
         }
       }
@@ -128,6 +170,12 @@
             "state" : "translated",
             "value" : "Lägsta"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найнижча температура"
+          }
         }
       }
     },
@@ -144,6 +192,12 @@
             "state" : "translated",
             "value" : "Uppdatera"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оновити"
+          }
         }
       }
     },
@@ -159,6 +213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temperatur"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Температура"
           }
         }
       }
@@ -177,6 +237,12 @@
             "state" : "translated",
             "value" : "Oväntat fel %@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неочікувана помилка %@"
+          }
         }
       }
     },
@@ -193,6 +259,12 @@
             "state" : "translated",
             "value" : "Vädret på %@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Погода в %@"
+          }
         }
       }
     },
@@ -208,6 +280,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vädret i Linnanmaa"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Погода в Ліннанмаа"
           }
         }
       }
@@ -226,6 +304,12 @@
             "state" : "translated",
             "value" : "Vädret uppdaterat"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Погода оновлена"
+          }
         }
       }
     },
@@ -242,6 +326,12 @@
             "state" : "translated",
             "value" : "Vindriktning"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напрямок вітру"
+          }
         }
       }
     },
@@ -257,6 +347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vindhastighet"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Швидкість вітру"
           }
         }
       }
